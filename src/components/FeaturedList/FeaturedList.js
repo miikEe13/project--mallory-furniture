@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 
-import ProductList from "../ProductList";
+import ProductListItem from "../ProductListItem";
 
 export default class Slide extends Component {
   state = {
@@ -35,12 +35,17 @@ export default class Slide extends Component {
         });
       });
   };
-  renderList(products) {
-    const list = products.map(product => {
-      return <ProductList key={product._id} data={product} />;
+  renderList = products => {
+    const featuredProducts = products.filter(product => {
+      if (product.featured === true) {
+        return product;
+      }
+    });
+    const list = featuredProducts.map(product => {
+      return <ProductListItem key={product._id} data={product} />;
     });
     return list;
-  }
+  };
   render() {
     const { loading, products, error } = this.state;
     console.log(products);

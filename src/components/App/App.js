@@ -3,6 +3,7 @@ import { Switch, Route } from "react-router-dom";
 
 import Layout from "../Layout";
 import Home from "../../pages/Home";
+import Category from "../../pages/Category";
 
 class App extends Component {
   render() {
@@ -11,6 +12,7 @@ class App extends Component {
         <Layout>
           <Switch>
             <Route exact path="/" component={Home} />
+            <Route exact path="/category/:categoryName" component={Category} />
           </Switch>
         </Layout>
       </div>

@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 
 import Logo from "../Logo";
 
@@ -10,9 +10,9 @@ export default class Header extends Component {
     return (
       <header className="header">
         <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
-          <a className="navbar-brand" href="#">
+          <NavLink className="navbar-brand" to="/">
             <Logo />
-          </a>
+          </NavLink>
           <button
             className="navbar-toggler"
             type="button"
@@ -27,19 +27,49 @@ export default class Header extends Component {
           <div className="collapse navbar-collapse" id="navbarText">
             <ul className="navbar-nav mr-auto">
               <li className="nav-item active">
-                <a className="nav-link" href="#">
-                  Home <span className="sr-only">(current)</span>
-                </a>
+                <NavLink className="nav-link" to="/about">
+                  About
+                </NavLink>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="#">
-                  Features
-                </a>
+                <NavLink className="nav-link" to="/">
+                  Term + Conditions
+                </NavLink>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="#">
-                  Pricing
-                </a>
+                <NavLink className="nav-link" to="/all">
+                  All
+                </NavLink>
+              </li>
+              <li className="nav-item">
+                <NavLink className="nav-link" to="/category/seating">
+                  Seating
+                </NavLink>
+              </li>
+              <li className="nav-item">
+                <NavLink className="nav-link" to="/category/tables">
+                  Tables
+                </NavLink>
+              </li>
+              <li className="nav-item">
+                <NavLink className="nav-link" to="/category/desk">
+                  Desk
+                </NavLink>
+              </li>
+              <li className="nav-item">
+                <NavLink className="nav-link" to="/category/storage">
+                  Storage
+                </NavLink>
+              </li>
+              <li className="nav-item">
+                <NavLink className="nav-link" to="/category/bedroom">
+                  Bedroom
+                </NavLink>
+              </li>
+              <li className="nav-item">
+                <NavLink className="nav-link" to="/category/">
+                  Misc
+                </NavLink>
               </li>
             </ul>
             <span className="navbar-text">carrito</span>
