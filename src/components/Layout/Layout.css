@@ -1,0 +1,5 @@
+.product-item-info.card a:hover,
+.product-item-info.card a:focus {
+  color: #0056b3;
+  text-decoration: none;
+}

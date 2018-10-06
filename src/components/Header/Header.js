@@ -52,7 +52,7 @@ export default class Header extends Component {
                 </NavLink>
               </li>
               <li className="nav-item">
-                <NavLink className="nav-link" to="/category/desk">
+                <NavLink className="nav-link" to="/category/desks">
                   Desk
                 </NavLink>
               </li>
@@ -67,7 +67,7 @@ export default class Header extends Component {
                 </NavLink>
               </li>
               <li className="nav-item">
-                <NavLink className="nav-link" to="/category/">
+                <NavLink className="nav-link" to="/category/miscellaneous">
                   Misc
                 </NavLink>
               </li>

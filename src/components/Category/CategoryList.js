@@ -1,10 +1,6 @@
 import React, { Component } from "react";
-
-//import CategoryList from "../../components/Category/CategoryList";
-import ProductListItem from "../../components/ProductListItem";
-import Slide from "../../components/Slide";
-
-export default class Category extends Component {
+import ProductListItem from "../ProductListItem";
+export default class CategoryList extends Component {
   state = {
     loading: true,
     error: null,
@@ -13,17 +9,8 @@ export default class Category extends Component {
   componentDidMount() {
     this.loadProducts();
   }
-  componentDidUpdate(prevProps) {
-    console.log("4 StarWarsPlanet did update");
-    if (
-      this.props.match.params.categoryName !==
-      prevProps.match.params.categoryName
-    ) {
-      this.loadProducts();
-    }
-  }
   loadProducts = () => {
-    const categoryName = this.props.match.params.categoryName;
+    const categoryName = this.props.data;
     const API_URL =
       "https://mallory-furniture-admin.now.sh/api/v1/products?category=" +
       categoryName;
@@ -62,24 +49,20 @@ export default class Category extends Component {
   };
   render() {
     const { loading, products, error } = this.state;
-    const categoryName = this.props.match.params.categoryName;
     console.log(products);
     return (
-      <React.Fragment>
-        <Slide data={categoryName} />
-        <section className="container">
-          <div className="row">
-            <div>
-              {!loading &&
-                products && (
-                  <div className="col-sm-12">
-                    <div className="row">{this.renderList(products)}</div>
-                  </div>
-                )}
-            </div>
+      <section className="container">
+        <div className="row">
+          <div>
+            {!loading &&
+              products && (
+                <div className="col-sm-12">
+                  <div className="row">{this.renderList(products)}</div>
+                </div>
+              )}
           </div>
-        </section>
-      </React.Fragment>
+        </div>
+      </section>
     );
   }
 }

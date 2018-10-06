@@ -7,7 +7,7 @@ export default class Home extends Component {
   render() {
     return (
       <React.Fragment>
-        <Slide />
+        <Slide data="home" />
         <FeaturedList />
       </React.Fragment>
     );
