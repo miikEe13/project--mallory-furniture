@@ -65,3 +65,12 @@ li.icons a {
   background: #2196f3;
   color: #fff;
 }
+button.btn.btn-danger.btn-md.addtocart-button {
+  background: #f44336;
+  border-radius: 20px;
+}
+button.btn.btn-danger.btn-md.addtocart-button {
+  background: #f44336;
+  border-radius: 20px;
+  border-color: #f44336;
+}

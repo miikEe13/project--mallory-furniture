@@ -11,7 +11,7 @@ export default class AddToCart extends Component {
         <button
           type="button"
           onClick={this.handleClickCart}
-          className="btn btn-danger btn-lg"
+          className="btn btn-danger btn-md addtocart-button"
         >
           Add to cart
         </button>
