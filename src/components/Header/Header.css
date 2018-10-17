@@ -25,3 +25,8 @@ img.cart-product-image {
   text-align: right;
   color: red;
 }
+span.navbar-text.container-minicart {
+  padding-right: 10px;
+  padding-left: 10px;
+  color: #ffc107;
+}

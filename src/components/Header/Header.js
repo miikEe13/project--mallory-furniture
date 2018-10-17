@@ -101,10 +101,10 @@ export default class Header extends Component {
             </ul>
 
             <span
-              className="navbar-text"
+              className="navbar-text container-minicart"
               onClick={() => this.setState({ isPaneOpen: true })}
             >
-              carrito
+              <i class="material-icons minicart">shopping_cart</i>
             </span>
             <SlidingPane
               className="some-custom-class"
