@@ -1,0 +1,27 @@
+img.cart-product-image {
+  width: 50%;
+}
+.ReactModalPortal .slide-pane__content {
+  padding-right: 0;
+  padding-left: 0;
+}
+.container.cart {
+  border-bottom: 1px solid #ccc;
+}
+.container.cart .row {
+  padding: 10px;
+}
+.cart-image {
+  text-align: center;
+}
+.cart-name {
+  text-align: center;
+}
+.cart-price {
+  text-align: right;
+}
+
+.remove-item {
+  text-align: right;
+  color: red;
+}

@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import "./product.css";
+import AddToCart from "../../components/AddToCart";
 export default class ProductView extends Component {
   state = {
     loading: true,
@@ -73,9 +74,10 @@ export default class ProductView extends Component {
                         </h6>
                       </div>
                       <div className="col-sm-4 col-md-4">
-                        <button type="button" className="btn btn-danger btn-lg">
-                          Large button
-                        </button>
+                        <AddToCart
+                          addToCart={this.props.addToCart}
+                          product={product}
+                        />
                       </div>
                     </div>
                   </div>

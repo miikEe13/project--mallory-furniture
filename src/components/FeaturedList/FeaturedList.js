@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 
 import ProductListItem from "../ProductListItem";
+import "./style.css";
 
 export default class Slide extends Component {
   state = {
@@ -52,7 +53,7 @@ export default class Slide extends Component {
     return (
       <section className="container">
         <div className="row">
-          <div className="col-sm-12">
+          <div className="col-sm-12 title">
             <h1>Featured Products</h1>
             <h3>Check out someof our favorite listings</h3>
           </div>

@@ -1,12 +1,11 @@
 import React, { Component } from "react";
 
 import ProductListItem from "../../components/ProductListItem";
-import Slide from "../../components/Slide";
 import Filters from "../../components/Category/Filters";
 
-import "./category.css";
+import "../Category/category.css";
 
-export default class Category extends Component {
+export default class Allproducts extends Component {
   constructor() {
     super();
     console.log("1");
@@ -31,11 +30,8 @@ export default class Category extends Component {
   }
   loadProducts = () => {
     const categoryName = this.props.match.params.categoryName;
-    const API_URL =
-      "https://mallory-furniture-admin.now.sh/api/v1/products?category=" +
-      categoryName;
+    const API_URL = "https://mallory-furniture-admin.now.sh/api/v1/products";
     console.log("loading products");
-    console.log(API_URL);
     this.setState({
       loading: true,
       error: null
@@ -64,7 +60,6 @@ export default class Category extends Component {
   renderList = products => {
     const categoryList = products.filter(product => {
       if (this.state.filter == "all") {
-        console.log("entra");
         return product;
       } else if (this.state.filter === "sale") {
         if (product.onSale) {
@@ -84,15 +79,9 @@ export default class Category extends Component {
     const categoryName = this.props.match.params.categoryName;
     return (
       <React.Fragment>
-        <Slide data={categoryName} />
         {<Filters onFilter={this.handleFilter} />}
         <section className="container">
           <div className="row">
-            <div className="col-sm-12 mt20">
-              <h1>
-                {categoryName.charAt(0).toUpperCase() + categoryName.slice(1)}
-              </h1>
-            </div>
             <div>
               {!loading &&
                 products && (

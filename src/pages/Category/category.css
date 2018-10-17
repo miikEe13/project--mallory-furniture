@@ -1,0 +1,15 @@
+.category-list-filter {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.filters button {
+  margin-left: 20px;
+}
+
+.filters {
+  text-align: right;
+}
+.condition-filter {
+  display: inline-block;
+  margin-left: 20px;
+}
