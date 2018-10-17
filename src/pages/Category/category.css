@@ -13,3 +13,12 @@
   display: inline-block;
   margin-left: 20px;
 }
+button.all-filter.btn.btn-secondary.btn-md {
+  background: white;
+  color: #f44336;
+  border-color: #f44336;
+}
+button.onsale-filter.btn.btn-secondary.btn-md {
+  background: #fff;
+  color: #6c757d;
+}

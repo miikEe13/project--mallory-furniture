@@ -16,7 +16,6 @@ export default class ProductView extends Component {
     const API_URL =
       "https://mallory-furniture-admin.now.sh/api/v1/products/" + productId;
     console.log("loading product");
-    console.log(API_URL);
     this.setState({
       loading: true,
       error: null

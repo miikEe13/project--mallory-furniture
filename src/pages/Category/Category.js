@@ -72,7 +72,6 @@ export default class Category extends Component {
         }
       }
     });
-    console.log(categoryList);
     const list = categoryList.map(product => {
       return <ProductListItem key={product._id} data={product} />;
     });

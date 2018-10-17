@@ -15,9 +15,13 @@ export default class Footer extends Component {
             <div className="col-sm-3 colum-footer footer-comppany">
               <ul>
                 <li className="item-footer head-item"> Company</li>
-                <li className="item-footer"> About</li>
+                <li className="item-footer">
+                  <Link to="/about">About</Link>
+                </li>
                 <li className="item-footer"> Press</li>
-                <li className="item-footer"> Term + Conditions</li>
+                <li className="item-footer">
+                  <Link to="terms"> Term + Conditions</Link>
+                </li>
               </ul>
             </div>
 

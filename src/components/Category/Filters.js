@@ -16,14 +16,14 @@ export default class Filters extends Component {
           <div className="col-sm-12 filters">
             <button
               type="button"
-              className="btn btn-secondary btn-sm"
+              className="all-filter btn btn-secondary btn-md"
               onClick={this.handleClickAll}
             >
               All products
             </button>
             <button
               type="button"
-              className="btn btn-secondary btn-sm"
+              className="onsale-filter btn btn-secondary btn-md"
               onClick={this.handleClickSale}
             >
               Sale

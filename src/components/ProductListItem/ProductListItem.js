@@ -12,7 +12,10 @@ export default class ProductListItem extends Component {
           <Link to={`/products/${product._id}`} className="card-body">
             <img className="product-image" src={product.imageLink} />
             <p>{product.item}</p>
-            <p>{product.price}</p>
+            <p>
+              ${product.price}
+              .00
+            </p>
           </Link>
         </div>
       </div>
